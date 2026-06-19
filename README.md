@@ -35,10 +35,14 @@ I executed a Service Version detection scan against the top 1000 standard ports 
   <img width="1920" height="946" alt="VirtualBox_kali-linux-2025 1a-virtualbox-amd64_19_06_2026_14_56_07" src="https://github.com/user-attachments/assets/1d133f83-4f4c-4c47-adef-a4c802817301" />
 
 
-### Step 3: Result Analysis
-The scan successfully uncovered the following open ports:
-* **Port 22/tcp (SSH):** Running OpenSSH (Version X.X). This port allows remote command-line access.
-* **Port 80/tcp (HTTP):** Running Apache httpd (Version X.X). This hosts the public web server.
+### Step 3: Result Analysis & Security Observations
+The scan uncovered the following states on the targeted ports:
+
+* **Port 80/tcp (HTTP):** Open, running Apache httpd.
+* **Port 22/tcp (SSH): State: `tcpwrapped`**
+  * **Analysis:** The `tcpwrapped` designation indicates that while the Nmap scanner successfully completed a TCP three-way handshake, the remote host immediately terminated the connection before any application data or service banners could be exchanged.
+  * **Security Takeaway:** This behavior indicates a host-based access control mechanism (such as Linux TCP Wrappers) or an inline network security device (like a Firewall/IPS) actively protecting the port. The server is configured to block unauthorized external IP addresses from initiating SSH sessions, effectively reducing its exposure to brute-force or exploitation attempts.
+
 
 ---
 
