@@ -21,7 +21,7 @@ Before scanning specific ports, I resolved the target domain name to its public 
 * **Command:** `nmap -sn scanme.nmap.org`
 * **Resulting IP Address:** `45.33.32.156`
 
-  <img width="1920" height="946" alt="VirtualBox_kali-linux-2025 1a-virtualbox-amd64_19_06_2026_14_56_07" src="https://github.com/user-attachments/assets/1d133f83-4f4c-4c47-adef-a4c802817301" />
+   <img width="1920" height="946" alt="VirtualBox_kali-linux-2025 1a-virtualbox-amd64_19_06_2026_14_53_22" src="https://github.com/user-attachments/assets/0b30fe07-c24a-4f76-8716-379821ce851a" />
 
 
 ### Step 2: Comprehensive Port & Service Scanning
@@ -31,8 +31,8 @@ I executed a Service Version detection scan against the top 1000 standard ports 
   * `-sV`: Detects service/version information.
   * `-F`: Fast mode (scans fewer ports for quick results).
 
-    <img width="1920" height="946" alt="VirtualBox_kali-linux-2025 1a-virtualbox-amd64_19_06_2026_14_53_22" src="https://github.com/user-attachments/assets/0b30fe07-c24a-4f76-8716-379821ce851a" />
-
+ 
+  <img width="1920" height="946" alt="VirtualBox_kali-linux-2025 1a-virtualbox-amd64_19_06_2026_14_56_07" src="https://github.com/user-attachments/assets/1d133f83-4f4c-4c47-adef-a4c802817301" />
 
 
 ### Step 3: Result Analysis
